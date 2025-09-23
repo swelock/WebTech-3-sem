@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Автосервис Drive&Care — ремонт, ТО и диагностика</title>
+    <meta
+      name="description"
+      content="Автосервис Drive&Care в Москве: быстрое и честное обслуживание, ремонт, диагностика, шиномонтаж. Запись онлайн и по телефону."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-inner">
+        <h1 class="logo">Drive&Care Автосервис</h1>
+        <nav class="main-nav" aria-label="Навигация по разделам">
+          <a href="#about">О компании</a>
+          <a href="#benefits">Преимущества</a>
+          <a href="#services">Услуги и цены</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section id="about" class="section about">
+        <div class="container about-inner">
+          <div class="about-media">
+            <img
+              class="about-image"
+              src="https://images.unsplash.com/photo-1542362567-b07e54358753?q=80&w=1600&auto=format&fit=crop"
+              alt="Механик проводит диагностику автомобиля в сервис-боксе"
+            />
+          </div>
+          <div class="about-content">
+            <h2>О компании</h2>
+            <p>
+              Drive&Care — современный независимый автосервис в Москве. Мы
+              выполняем техническое обслуживание и ремонт с прозрачной сметой,
+              согласованием работ и строгим соблюдением сроков. Наши мастера
+              сертифицированы, а запчасти — от проверенных поставщиков.
+            </p>
+            <p>
+              В сервисе доступны: комплексная диагностика, регламентное ТО,
+              ремонт ходовой, тормозной системы, ДВС и АКПП, шиномонтаж,
+              сезонное хранение колёс и установка дополнительного оборудования.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section id="benefits" class="section benefits">
+        <div class="container">
+          <h2>Почему нас выбирают</h2>
+          <ul class="benefits-list">
+            <li><strong>Честная смета:</strong> фиксируем цену до начала работ.</li>
+            <li><strong>Гарантия 12 месяцев:</strong> на работы и установленные запчасти.</li>
+            <li><strong>Скорость:</strong> большинство регламентных работ — в день обращения.</li>
+            <li><strong>Комфорт:</strong> онлайн-запись, wi‑fi и кофе-зона для клиентов.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="services" class="section services">
+        <div class="container">
+          <h2>Популярные услуги и цены</h2>
+          <div class="table-wrap">
+            <table class="price-table" aria-label="Таблица популярных услуг и цен">
+              <thead>
+                <tr>
+                  <th>Услуга</th>
+                  <th>Описание</th>
+                  <th>Цена, ₽</th>
+                  <th>Время</th>
+                  <th>Гарантия</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Диагностика</td>
+                  <td>Компьютерная проверка узлов и систем</td>
+                  <td>1 500</td>
+                  <td>45 мин</td>
+                  <td>12 мес</td>
+                </tr>
+                <tr>
+                  <td>ТО базовое</td>
+                  <td>Замена масла, фильтров, технический осмотр</td>
+                  <td>4 900</td>
+                  <td>1,5 ч</td>
+                  <td>12 мес</td>
+                </tr>
+                <tr>
+                  <td>Тормозная система</td>
+                  <td>Замена колодок и обслуживание суппортов</td>
+                  <td>3 200</td>
+                  <td>1 ч</td>
+                  <td>12 мес</td>
+                </tr>
+                <tr>
+                  <td>Ходовая часть</td>
+                  <td>Диагностика и замена стоек, шарниров, сайлентблоков</td>
+                  <td>от 3 500</td>
+                  <td>2–4 ч</td>
+                  <td>12 мес</td>
+                </tr>
+                <tr>
+                  <td>Шиномонтаж</td>
+                  <td>Смена комплекта, балансировка, хранение колёс</td>
+                  <td>от 2 000</td>
+                  <td>40–60 мин</td>
+                  <td>6 мес</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contacts" class="site-footer">
+      <div class="container footer-inner">
+        <p>
+          © <span id="year"></span> Drive&Care, Москва. Ул. Автосервисная, д. 10.
+        </p>
+        <p>
+          Тел.: <a href="tel:+74951234567">+7 (495) 123‑45‑67</a> ·
+          Почта: <a href="mailto:hello@drivecare.ru">hello@drivecare.ru</a>
+        </p>
+      </div>
+      <script>
+        const y = new Date().getFullYear();
+        const el = document.getElementById('year');
+        if (el) el.textContent = String(y);
+      </script>
+    </footer>
+  </body>
+  </html>
+
+

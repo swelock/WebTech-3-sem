@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #0f172a;
+  background: #ffffff;
+}
+
+.container {
+  width: 100%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.site-header {
+  position: sticky;
+  top: 0;
+  background: #ffffffcc;
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 0;
+}
+
+.logo {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main-nav a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #0f172a;
+  margin-left: 16px;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+
+.main-nav a:hover {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.section {
+  padding: 40px 0;
+}
+
+.about-inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 24px;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.about-content h2,
+.benefits h2,
+.services h2 {
+  font-size: 28px;
+  margin: 0 0 16px 0;
+}
+
+.about p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin: 0 0 12px 0;
+}
+
+.benefits-list {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.benefits-list li {
+  margin-bottom: 10px;
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+.price-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+}
+
+.price-table th,
+.price-table td {
+  text-align: left;
+  border: 1px solid #e2e8f0;
+  padding: 12px 14px;
+}
+
+.price-table thead th {
+  background: #f8fafc;
+  font-weight: 600;
+}
+
+.site-footer {
+  margin-top: 24px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.footer-inner {
+  padding: 24px 0;
+}
+
+.site-footer a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #93c5fd;
+}
+
+@media (max-width: 860px) {
+  .about-inner {
+    grid-template-columns: 1fr;
+  }
+  .about-image {
+    height: 240px;
+  }
+}
+
+

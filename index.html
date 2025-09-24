@@ -24,6 +24,8 @@
           <a href="#about">О компании</a>
           <a href="#benefits">Преимущества</a>
           <a href="#services">Услуги и цены</a>
+          <a href="#feedback">Обратная связь</a>
+          <a href="#auth">Вход</a>
           <a href="#contacts">Контакты</a>
         </nav>
       </div>
@@ -121,6 +123,95 @@
               </tbody>
             </table>
           </div>
+        </div>
+      </section>
+
+      <section id="feedback" class="section feedback">
+        <div class="container">
+          <h2>Обратная связь</h2>
+          <form class="form" action="https://httpbin.org/post" method="POST" enctype="multipart/form-data">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="fio">ФИО</label>
+                <input type="text" id="fio" name="fio" placeholder="Иванов Иван Иванович" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="name@example.com" required />
+              </div>
+            </div>
+
+            <fieldset class="form-fieldset">
+              <legend>Откуда вы узнали о нас?</legend>
+              <div class="radio-row">
+                <label class="radio">
+                  <input type="radio" name="source" value="search" required /> Поиск в интернете
+                </label>
+                <label class="radio">
+                  <input type="radio" name="source" value="friends" /> Друзья/знакомые
+                </label>
+                <label class="radio">
+                  <input type="radio" name="source" value="ads" /> Реклама
+                </label>
+                <label class="radio">
+                  <input type="radio" name="source" value="social" /> Социальные сети
+                </label>
+              </div>
+            </fieldset>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="type">Тип обращения</label>
+                <select id="type" name="type" required>
+                  <option value="complaint">Жалоба</option>
+                  <option value="suggestion">Предложение</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Текст сообщения</label>
+              <textarea id="message" name="message" rows="6" placeholder="Опишите ситуацию или ваше предложение" required></textarea>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="attachment">Вложения</label>
+                <input type="file" id="attachment" name="attachment" />
+              </div>
+            </div>
+
+            <label class="checkbox">
+              <input type="checkbox" name="consent" value="yes" required /> Даю согласие на обработку персональных данных
+            </label>
+
+            <div class="actions">
+              <button type="submit" class="btn primary">Отправить</button>
+              <button type="reset" class="btn">Сбросить</button>
+            </div>
+          </form>
+        </div>
+      </section>
+
+      <section id="auth" class="auth-hero" aria-label="Форма аутентификации">
+        <div class="auth-overlay">
+          <form class="auth-card" action="https://httpbin.org/post" method="POST">
+            <h2>Вход в личный кабинет</h2>
+            <div class="form-group">
+              <label for="login">Логин</label>
+              <input type="text" id="login" name="login" autocomplete="username" required />
+            </div>
+            <div class="form-group">
+              <label for="password">Пароль</label>
+              <input type="password" id="password" name="password" autocomplete="current-password" required />
+            </div>
+            <label class="checkbox">
+              <input type="checkbox" name="remember" value="1" /> Запомнить меня
+            </label>
+            <div class="actions">
+              <button type="submit" class="btn primary full">Войти</button>
+            </div>
+          </form>
         </div>
       </section>
     </main>

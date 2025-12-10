@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Сделать заказ - Уютное Кафе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="orders.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <script src="dishes.js"></script>
+    <script src="order.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Уютное Кафе</h1>
+        <nav>
+            <a href="index.html#about">О нас</a>
+            <a href="lunch.html">Собрать ланч</a>
+            <a href="orders.html" class="active">Заказы</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="order-section">
+            <h2>Сделать заказ</h2>
+            <form action="https://postman-echo.com/post" method="POST" class="order-form" id="order-form">
+                <div class="form-columns">
+                    <div class="form-column">
+                        <div id="order-summary">
+                            <p class="no-selection">Ничего не выбрано</p>
+                        </div>
+                        <h3 style="margin-top: 30px;">Комментарии к заказу</h3>
+                        
+                        <div class="form-group">
+                            <label for="comments">Комментарии к заказу</label>
+                            <textarea id="comments" name="comments" rows="5"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="form-column">
+                        <h3>Ваши данные</h3>
+                        
+                        <div class="form-group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" id="newsletter" checked>
+                                <span>Получать информацию о скидках и акциях</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="address">Адрес доставки</label>
+                            <input type="text" id="address" name="address" required>
+                            <small>Доставка осуществляется только по Москве</small>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Время доставки:</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="delivery-time" value="asap" id="asap" checked>
+                                    <span>Как можно скорее</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="delivery-time" value="scheduled" id="scheduled">
+                                    <span>К указанному времени</span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="time-input-group" style="display: none;">
+                            <label for="delivery-time-input">Укажите время доставки</label>
+                            <input type="time" id="delivery-time-input" name="delivery-time-input" min="07:00" max="23:00">
+                            <small>Доступное время доставки с 7:00 до 23:00</small>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-buttons">
+                    <button type="reset" class="reset-btn">Сбросить</button>
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Свяжитесь с нами: <a href="tel:+79991234567">+7 (999) 123-45-67</a> | <a href="mailto:info@uyutnoe-cafe.ru">info@uyutnoe-cafe.ru</a></p>
+    </footer>
+
+    <script>
+        // Показать/скрыть поле времени доставки
+        document.getElementById('scheduled').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('time-input-group').style.display = 'block';
+            }
+        });
+        
+        document.getElementById('asap').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('time-input-group').style.display = 'none';
+            }
+        });
+
+        // Добавить скрытые поля для выбранных блюд при отправке формы
+        document.getElementById('order-form').addEventListener('submit', function(e) {
+            const selectedDishes = getSelectedDishes();
+            
+            // Создаем скрытые поля для отправки keyword блюд
+            const soupInput = document.createElement('input');
+            soupInput.type = 'hidden';
+            soupInput.name = 'soup-keyword';
+            soupInput.value = selectedDishes.soup;
+            this.appendChild(soupInput);
+
+            const mainInput = document.createElement('input');
+            mainInput.type = 'hidden';
+            mainInput.name = 'main-keyword';
+            mainInput.value = selectedDishes.main;
+            this.appendChild(mainInput);
+
+            const drinkInput = document.createElement('input');
+            drinkInput.type = 'hidden';
+            drinkInput.name = 'drink-keyword';
+            drinkInput.value = selectedDishes.drink;
+            this.appendChild(drinkInput);
+        });
+    </script>
+</body>
+</html>
+

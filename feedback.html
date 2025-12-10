@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Обратная связь - Уютное Кафе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Уютное Кафе</h1>
+        <nav>
+            <a href="index.html#about">О нас</a>
+            <a href="lunch.html">Собрать ланч</a>
+            <a href="orders.html">Заказы</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="feedback-section">
+            <h2>Форма обратной связи</h2>
+            <form action="https://postman-echo.com/post" method="POST" enctype="multipart/form-data" class="feedback-form">
+                <div class="form-group">
+                    <label for="fio">ФИО *</label>
+                    <input type="text" id="fio" name="fio" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Откуда узнали о нас *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="internet" required>
+                            <span>Интернет</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="friends" required>
+                            <span>От друзей</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="advertising" required>
+                            <span>Реклама</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="other" required>
+                            <span>Другое</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Тип обращения *</label>
+                    <select id="type" name="type" required>
+                        <option value="">Выберите тип обращения</option>
+                        <option value="complaint">Жалоба</option>
+                        <option value="suggestion">Предложение</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Текст сообщения *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachment">Вложения</label>
+                    <input type="file" id="attachment" name="attachment" accept="image/*,.pdf,.doc,.docx">
+                    <small>Можно прикрепить изображение, PDF или документ</small>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="consent" required>
+                        <span>Даю согласие на обработку персональных данных *</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Свяжитесь с нами: <a href="tel:+79991234567">+7 (999) 123-45-67</a> | <a href="mailto:info@uyutnoe-cafe.ru">info@uyutnoe-cafe.ru</a></p>
+    </footer>
+</body>
+</html>
+

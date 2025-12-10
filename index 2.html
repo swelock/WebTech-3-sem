@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Уютное Кафе - Домашняя кухня с доставкой</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="print.css" media="print">
+</head>
+<body>
+    <header>
+        <h1>Уютное Кафе</h1>
+        <nav>
+            <a href="index.html#about" class="active">О нас</a>
+            <a href="lunch.html">Собрать ланч</a>
+            <a href="orders.html">Заказы</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="about" class="about-section">
+            <h2>О нас</h2>
+            <img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=1200&h=600&fit=crop" alt="Интерьер уютного кафе">
+            <p>Уютное Кафе - это место, где каждый найдет что-то по душе. Мы готовим блюда домашней кухни из свежих продуктов, используя проверенные рецепты. Наша миссия - дарить вам тепло и уют через вкусную еду. Мы доставляем заказы по всему городу, чтобы вы могли наслаждаться нашими блюдами в любое время.</p>
+        </section>
+
+        <section class="advantages-section">
+            <h2>Почему выбирают нас</h2>
+            <ul>
+                <li>Готовим только из свежих продуктов, закупаемых ежедневно</li>
+                <li>Быстрая доставка в течение 30-45 минут в любую точку города</li>
+                <li>Большой выбор вегетарианских и диетических блюд</li>
+                <li>Удобная система онлайн-заказа с возможностью отслеживания</li>
+            </ul>
+        </section>
+
+        <section class="popular-dishes-section">
+            <h2>Хиты продаж</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Название</th>
+                        <th>Кол-во заказов в неделю</th>
+                        <th>Цена</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Борщ с говядиной и сметаной</td>
+                        <td>247</td>
+                        <td>320₽</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Стейк из лосося с овощами</td>
+                        <td>198</td>
+                        <td>450₽</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Паста Карбонара</td>
+                        <td>176</td>
+                        <td>380₽</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>Цезарь с курицей</td>
+                        <td>165</td>
+                        <td>290₽</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Плов узбекский с бараниной</td>
+                        <td>142</td>
+                        <td>420₽</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="login-section">
+            <h2>Вход в систему</h2>
+            <div class="login-form-container">
+                <form action="https://postman-echo.com/post" method="POST" class="login-form-inline">
+                    <div class="form-group">
+                        <label for="login">Логин</label>
+                        <input type="text" id="login" name="login" required autocomplete="username">
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Пароль</label>
+                        <input type="password" id="password" name="password" required autocomplete="current-password">
+                    </div>
+
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" name="remember" id="remember">
+                            <span>Запомнить меня</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Войти</button>
+                </form>
+            </div>
+        </section>
+
+        <section class="feedback-section">
+            <h2>Форма обратной связи</h2>
+            <form action="https://postman-echo.com/post" method="POST" enctype="multipart/form-data" class="feedback-form">
+                <div class="form-group">
+                    <label for="fio">ФИО *</label>
+                    <input type="text" id="fio" name="fio" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email *</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Откуда узнали о нас *</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="internet" required>
+                            <span>Интернет</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="friends" required>
+                            <span>От друзей</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="advertising" required>
+                            <span>Реклама</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="source" value="other" required>
+                            <span>Другое</span>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="type">Тип обращения *</label>
+                    <select id="type" name="type" required>
+                        <option value="">Выберите тип обращения</option>
+                        <option value="complaint">Жалоба</option>
+                        <option value="suggestion">Предложение</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Текст сообщения *</label>
+                    <textarea id="message" name="message" rows="6" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="attachment">Вложения</label>
+                    <input type="file" id="attachment" name="attachment" accept="image/*,.pdf,.doc,.docx">
+                    <small>Можно прикрепить изображение, PDF или документ</small>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="consent" required>
+                        <span>Даю согласие на обработку персональных данных *</span>
+                    </label>
+                </div>
+
+                <button type="submit" class="submit-btn">Отправить</button>
+            </form>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Свяжитесь с нами: <a href="tel:+79991234567">+7 (999) 123-45-67</a> | <a href="mailto:info@uyutnoe-cafe.ru">info@uyutnoe-cafe.ru</a></p>
+    </footer>
+</body>
+</html>
+

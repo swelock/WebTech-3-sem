@@ -1,0 +1,150 @@
+/* Стили для страницы "Собрать ланч" */
+
+/* Фиксация футера внизу для страницы lunch */
+body {
+    min-height: 100vh;
+}
+
+/* Блок с блюдами - CSS Grid */
+.dishes-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-top: 30px;
+}
+
+/* Блок каждого блюда - Flexbox */
+.dish-item {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 40px;
+    border-radius: 35px;
+    cursor: pointer;
+    filter: drop-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+    background-color: white;
+    transition: all 0.3s ease;
+}
+
+.dish-item:hover {
+    border: 2px solid tomato;
+}
+
+.dish-item:hover button {
+    background-color: tomato;
+    color: white;
+}
+
+/* Изображение */
+.dish-item img {
+    width: 100%;
+    border-radius: 35px;
+    margin-bottom: 15px;
+}
+
+/* Цена */
+.dish-item .dish-price {
+    font-size: 20px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+}
+
+/* Название блюда */
+.dish-item .dish-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+    flex-grow: 1;
+}
+
+/* Вес/объем */
+.dish-item .dish-weight {
+    color: #666;
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+/* Кнопка */
+.dish-item button {
+    background-color: #f1eee9;
+    border: none;
+    padding: 10px 30px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'Open Sans', sans-serif;
+    color: #2c2c2c;
+    margin-top: auto;
+    transition: all 0.3s ease;
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.dish-item button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+/* Адаптивность для страницы "Собрать ланч" */
+
+/* ≤800px */
+@media (max-width: 800px) {
+    .dishes-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    nav {
+        justify-content: space-between;
+    }
+}
+
+/* ≤600px */
+@media (max-width: 600px) {
+    .dishes-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    header h1 {
+        text-align: center;
+    }
+    
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav a {
+        font-size: 22px;
+    }
+    
+    section h2 {
+        text-align: center;
+    }
+    
+    .about-section img {
+        width: 100%;
+    }
+    
+    table {
+        font-size: 14px;
+    }
+    
+    td, th {
+        font-size: 14px;
+    }
+}
+
+/* ≤400px */
+@media (max-width: 400px) {
+    table {
+        font-size: 12px;
+    }
+    
+    td, th {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+

@@ -1,63 +1,42 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Вход в личный кабинет — Drive&Care Автосервис</title>
-    <meta name="description" content="Войдите в личный кабинет Drive&Care для управления заказами и историей обслуживания." />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="./styles.css" />
-  </head>
-  <body>
-    <section class="auth-hero" aria-label="Форма аутентификации">
-      <div class="auth-overlay">
-        <form class="auth-card" action="https://httpbin.org/post" method="POST">
-          <a href="index.html" class="back-link">← Вернуться на главную</a>
-          <h2>Вход в личный кабинет</h2>
-          <p class="auth-subtitle">Войдите, чтобы управлять своими заказами</p>
-          
-          <div class="form-group">
-            <label for="login">Логин</label>
-            <input 
-              type="text" 
-              id="login" 
-              name="login" 
-              placeholder="Ваш логин" 
-              autocomplete="username" 
-              required 
-            />
-          </div>
-          
-          <div class="form-group">
-            <label for="password">Пароль</label>
-            <input 
-              type="password" 
-              id="password" 
-              name="password" 
-              placeholder="Введите пароль" 
-              autocomplete="current-password" 
-              required 
-            />
-          </div>
-          
-          <label class="checkbox auth-checkbox">
-            <input type="checkbox" name="remember" value="1" /> 
-            <span>Запомнить меня</span>
-          </label>
-          
-          <div class="actions">
-            <button type="submit" class="btn primary full">Войти</button>
-          </div>
-          
-          <div class="auth-footer">
-            <a href="#" class="text-link">Забыли пароль?</a>
-            <a href="#" class="text-link">Зарегистрироваться</a>
-          </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Вход - Уютное Кафе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="login-page">
+    <div class="login-container">
+        <form action="https://postman-echo.com/post" method="POST" class="login-form">
+            <h2>Вход в систему</h2>
+            
+            <div class="form-group">
+                <label for="login">Логин</label>
+                <input type="text" id="login" name="login" required autocomplete="username">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Пароль</label>
+                <input type="password" id="password" name="password" required autocomplete="current-password">
+            </div>
+
+            <div class="form-group checkbox-group">
+                <label class="checkbox-label">
+                    <input type="checkbox" name="remember" id="remember">
+                    <span>Запомнить меня</span>
+                </label>
+            </div>
+
+            <button type="submit" class="submit-btn">Войти</button>
         </form>
-      </div>
-    </section>
-  </body>
+    </div>
+</body>
 </html>
 

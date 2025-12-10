@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Оформить заказ - Уютное Кафе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <script src="dishes.js"></script>
+    <script src="order.js"></script>
+    <script src="checkout.js"></script>
+    <script src="submit_order.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Уютное Кафе</h1>
+        <nav>
+            <a href="landing.html">Лендинг</a>
+            <a href="index.html#about">О нас</a>
+            <a href="lunch.html">Собрать ланч</a>
+            <a href="checkout.html" class="active">Оформить заказ</a>
+            <a href="orders.html">Заказы</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="checkout-section">
+            <h2>Оформить заказ</h2>
+            
+            <div class="checkout-container">
+                <!-- Раздел "Состав заказа" -->
+                <div class="order-composition">
+                    <h3>Состав заказа</h3>
+                    <div id="order-composition-content">
+                        <p class="no-selection">Ничего не выбрано. Чтобы добавить блюда в заказ, перейдите на страницу <a href="lunch.html">Собрать ланч</a>.</p>
+                    </div>
+                </div>
+
+                <!-- Раздел "Оформление заказа" -->
+                <div class="order-form-section">
+                    <h3>Оформление заказа</h3>
+                    <form id="checkout-form" class="checkout-form">
+                        <div class="form-columns">
+                            <div class="form-column">
+                                <div id="order-summary">
+                                    <p class="no-selection">Ничего не выбрано</p>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="comment">Комментарии к заказу</label>
+                                    <textarea id="comment" name="comment" rows="5"></textarea>
+                                </div>
+                            </div>
+
+                            <div class="form-column">
+                                <div class="form-group">
+                                    <label for="full_name">ФИО <span class="required">*</span></label>
+                                    <input type="text" id="full_name" name="full_name" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email">Email <span class="required">*</span></label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+
+                                <div class="form-group checkbox-group">
+                                    <label class="checkbox-label">
+                                        <input type="checkbox" name="subscribe" id="subscribe" value="1">
+                                        <span>Получать информацию о скидках и акциях</span>
+                                    </label>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="phone">Номер телефона <span class="required">*</span></label>
+                                    <input type="tel" id="phone" name="phone" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="delivery_address">Адрес доставки <span class="required">*</span></label>
+                                    <input type="text" id="delivery_address" name="delivery_address" required>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Время доставки <span class="required">*</span>:</label>
+                                    <div class="radio-group">
+                                        <label class="radio-label">
+                                            <input type="radio" name="delivery_type" value="now" id="delivery_now" checked>
+                                            <span>Как можно скорее</span>
+                                        </label>
+                                        <label class="radio-label">
+                                            <input type="radio" name="delivery_type" value="by_time" id="delivery_by_time">
+                                            <span>К указанному времени</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" id="time-input-group" style="display: none;">
+                                    <label for="delivery_time">Укажите время доставки</label>
+                                    <input type="time" id="delivery_time" name="delivery_time" min="07:00" max="23:00" step="300">
+                                    <small>Доступное время доставки с 7:00 до 23:00 с шагом 5 минут</small>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-buttons">
+                            <button type="reset" class="reset-btn">Сбросить</button>
+                            <button type="submit" class="submit-btn">Отправить</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Свяжитесь с нами: <a href="tel:+79991234567">+7 (999) 123-45-67</a> | <a href="mailto:info@uyutnoe-cafe.ru">info@uyutnoe-cafe.ru</a></p>
+    </footer>
+
+    <script>
+        // Показать/скрыть поле времени доставки
+        document.getElementById('delivery_by_time').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('time-input-group').style.display = 'block';
+                document.getElementById('delivery_time').required = true;
+            }
+        });
+        
+        document.getElementById('delivery_now').addEventListener('change', function() {
+            if (this.checked) {
+                document.getElementById('time-input-group').style.display = 'none';
+                document.getElementById('delivery_time').required = false;
+            }
+        });
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>История заказов - Уютное Кафе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="orders.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <script src="dishes.js"></script>
+    <script src="orders_history.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Уютное Кафе</h1>
+        <nav>
+            <a href="landing.html">Лендинг</a>
+            <a href="index.html#about">О нас</a>
+            <a href="lunch.html">Собрать ланч</a>
+            <a href="checkout.html">Оформить заказ</a>
+            <a href="orders.html" class="active">Заказы</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="orders-section">
+            <h2>История заказов</h2>
+            <div id="orders-loading" class="loading-message">Загрузка заказов...</div>
+            <div id="orders-empty" class="empty-message" style="display: none;">
+                <p>У вас пока нет заказов. <a href="lunch.html">Создайте первый заказ</a></p>
+            </div>
+            <table id="orders-table" class="orders-table" style="display: none;">
+                <thead>
+                    <tr>
+                        <th>№</th>
+                        <th>Дата оформления</th>
+                        <th>Состав заказа</th>
+                        <th>Стоимость</th>
+                        <th>Время доставки</th>
+                        <th>Действия</th>
+                    </tr>
+                </thead>
+                <tbody id="orders-tbody">
+                    <!-- Заказы будут добавлены динамически -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer id="contacts">
+        <p>Свяжитесь с нами: <a href="tel:+79991234567">+7 (999) 123-45-67</a> | <a href="mailto:info@uyutnoe-cafe.ru">info@uyutnoe-cafe.ru</a></p>
+    </footer>
+
+    <!-- Модальное окно просмотра заказа -->
+    <div id="view-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('view-modal')">&times;</span>
+            <h2>Просмотр заказа</h2>
+            <div id="view-modal-body">
+                <!-- Содержимое будет добавлено динамически -->
+            </div>
+            <div class="modal-buttons">
+                <button class="btn-ok" onclick="closeModal('view-modal')">Ок</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Модальное окно редактирования заказа -->
+    <div id="edit-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('edit-modal')">&times;</span>
+            <h2>Редактирование заказа</h2>
+            <form id="edit-order-form">
+                <div id="edit-modal-body">
+                    <!-- Содержимое будет добавлено динамически -->
+                </div>
+                <div class="modal-buttons">
+                    <button type="button" class="btn-cancel" onclick="closeModal('edit-modal')">Отмена</button>
+                    <button type="submit" class="btn-save">Сохранить</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Модальное окно удаления заказа -->
+    <div id="delete-modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal('delete-modal')">&times;</span>
+            <h2>Удаление заказа</h2>
+            <div class="modal-body">
+                <p>Вы уверены, что хотите удалить заказ?</p>
+            </div>
+            <div class="modal-buttons">
+                <button type="button" class="btn-cancel" onclick="closeModal('delete-modal')">Отмена</button>
+                <button type="button" class="btn-delete" onclick="confirmDelete()">Да</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

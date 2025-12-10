@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Собрать ланч - Уютное Кафе</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="lunch.css">
+    <link rel="stylesheet" href="print.css" media="print">
+    <script src="dishes.js"></script>
+    <script src="display.js"></script>
+    <script src="filter.js"></script>
+    <script src="order.js"></script>
+    <script src="lunch_panel.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Уютное Кафе</h1>
+        <nav>
+            <a href="landing.html">Лендинг</a>
+            <a href="index.html#about">О нас</a>
+            <a href="lunch.html" class="active">Собрать ланч</a>
+            <a href="checkout.html">Оформить заказ</a>
+            <a href="orders.html">Заказы</a>
+            <a href="index.html#contacts">Контакты</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="combo-section">
+            <h2>Доступные для заказа комбо</h2>
+            <div class="combo-grid">
+                <div class="combo-item">
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=100&h=100&fit=crop" alt="Суп">
+                        <span>Суп</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=100&h=100&fit=crop" alt="Главное блюдо">
+                        <span>Главное блюдо</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=100&h=100&fit=crop" alt="Салат">
+                        <span>Салат</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=100&h=100&fit=crop" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+                <div class="combo-item">
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=100&h=100&fit=crop" alt="Суп">
+                        <span>Суп</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=100&h=100&fit=crop" alt="Главное блюдо">
+                        <span>Главное блюдо</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=100&h=100&fit=crop" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+                <div class="combo-item">
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=100&h=100&fit=crop" alt="Суп">
+                        <span>Суп</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=100&h=100&fit=crop" alt="Салат">
+                        <span>Салат</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=100&h=100&fit=crop" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+                <div class="combo-item">
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=100&h=100&fit=crop" alt="Главное блюдо">
+                        <span>Главное блюдо</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=100&h=100&fit=crop" alt="Салат">
+                        <span>Салат</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=100&h=100&fit=crop" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+                <div class="combo-item">
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1621996346565-e3dbc646d9a9?w=100&h=100&fit=crop" alt="Главное блюдо">
+                        <span>Главное блюдо</span>
+                    </div>
+                    <div class="combo-dish">
+                        <img src="https://images.unsplash.com/photo-1600271886742-f049cd451bba?w=100&h=100&fit=crop" alt="Напиток">
+                        <span>Напиток</span>
+                    </div>
+                </div>
+            </div>
+            <div class="dessert-info">
+                <div class="combo-dish">
+                    <img src="https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=100&h=100&fit=crop" alt="Десерт">
+                    <span>Десерт</span>
+                </div>
+                <p class="dessert-note">(Можно добавить к любому заказу)</p>
+            </div>
+        </section>
+
+        <section class="soups-section">
+            <h2>Выберите суп</h2>
+            <div class="filters" data-category="soup">
+                <button class="filter-btn" data-kind="fish">рыбный</button>
+                <button class="filter-btn" data-kind="meat">мясной</button>
+                <button class="filter-btn" data-kind="veg">вегетарианский</button>
+            </div>
+            <div class="dishes-grid">
+                <!-- Блюда будут добавлены динамически через JavaScript -->
+            </div>
+        </section>
+
+        <section class="main-dishes-section">
+            <h2>Выберите главное блюдо</h2>
+            <div class="filters" data-category="main">
+                <button class="filter-btn" data-kind="fish">рыбное</button>
+                <button class="filter-btn" data-kind="meat">мясное</button>
+                <button class="filter-btn" data-kind="veg">вегетарианское</button>
+            </div>
+            <div class="dishes-grid">
+                <!-- Блюда будут добавлены динамически через JavaScript -->
+            </div>
+        </section>
+
+        <section class="starters-section">
+            <h2>Выберите салат или стартер</h2>
+            <div class="filters" data-category="starter">
+                <button class="filter-btn" data-kind="fish">рыбный</button>
+                <button class="filter-btn" data-kind="meat">мясной</button>
+                <button class="filter-btn" data-kind="veg">вегетарианский</button>
+            </div>
+            <div class="dishes-grid">
+                <!-- Блюда будут добавлены динамически через JavaScript -->
+            </div>
+        </section>
+
+        <section class="drinks-section">
+            <h2>Выберите напиток</h2>
+            <div class="filters" data-category="drink">
+                <button class="filter-btn" data-kind="cold">холодный</button>
+                <button class="filter-btn" data-kind="hot">горячий</button>
+            </div>
+            <div class="dishes-grid">
+                <!-- Блюда будут добавлены динамически через JavaScript -->
+            </div>
+        </section>
+
+        <section class="desserts-section">
+            <h2>Выберите десерт</h2>
+            <div class="filters" data-category="dessert">
+                <button class="filter-btn" data-kind="small">маленькая порция</button>
+                <button class="filter-btn" data-kind="medium">средняя порция</button>
+                <button class="filter-btn" data-kind="large">большая порция</button>
+            </div>
+            <div class="dishes-grid">
+                <!-- Блюда будут добавлены динамически через JavaScript -->
+            </div>
+        </section>
+
+        <!-- Панель для перехода к оформлению заказа -->
+        <div id="checkout-panel" class="checkout-panel" style="display: none;">
+            <div class="checkout-panel-content">
+                <div class="checkout-panel-info">
+                    <p class="checkout-panel-total">Стоимость заказа: <span id="checkout-total">0</span>₽</p>
+                </div>
+                <a href="checkout.html" id="checkout-link" class="checkout-link" style="pointer-events: none; opacity: 0.5;">Перейти к оформлению</a>
+            </div>
+        </div>
+    </main>
+
+    <footer id="contacts">
+        <p>Свяжитесь с нами: <a href="tel:+79991234567">+7 (999) 123-45-67</a> | <a href="mailto:info@uyutnoe-cafe.ru">info@uyutnoe-cafe.ru</a></p>
+    </footer>
+
+</body>
+</html>
+

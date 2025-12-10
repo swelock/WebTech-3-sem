@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>Уютное Кафе - Доставка бизнес-ланчей в Москве</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="landing.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="landing.html">
+                <span class="brand-text">Уютное Кафе</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Преимущества</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#menu">Меню</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary text-white ms-2 px-3" href="lunch.html">Собрать ланч</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6 order-lg-2 mb-4 mb-lg-0">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?w=800&h=600&fit=crop" alt="Вкусные бизнес-ланчи" class="img-fluid rounded shadow-lg">
+                    </div>
+                </div>
+                <div class="col-lg-6 order-lg-1">
+                    <h1 class="display-3 fw-bold mb-4 text-white">Уютное Кафе</h1>
+                    <p class="lead text-white mb-4">
+                        Доставляем свежие и вкусные бизнес-ланчи прямо в ваш офис. 
+                        Качественные ингредиенты, разнообразное меню и быстрая доставка по всей Москве.
+                    </p>
+                    <p class="text-white mb-4">
+                        Выберите блюда из нашего меню, соберите идеальный ланч и получите его уже через час. 
+                        Мы заботимся о вашем здоровье и вкусовых предпочтениях.
+                    </p>
+                    <div class="d-flex flex-column flex-sm-row gap-3">
+                        <a href="lunch.html" class="btn btn-primary btn-lg px-5">Собрать ланч</a>
+                        <a href="#features" class="btn btn-outline-light btn-lg px-5">Узнать больше</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features-section py-5" id="features">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-4 fw-bold mb-3">Почему выбирают нас</h2>
+                    <p class="lead text-muted">Мы предлагаем лучший сервис доставки бизнес-ланчей в Москве</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100 p-4 text-center">
+                        <div class="feature-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#8B4513" class="bi bi-clock" viewBox="0 0 16 16">
+                                <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Быстрая доставка</h3>
+                        <p class="text-muted">Доставляем заказы в течение часа. Вы можете выбрать удобное время доставки с 7:00 до 23:00.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100 p-4 text-center">
+                        <div class="feature-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#8B4513" class="bi bi-shield-check" viewBox="0 0 16 16">
+                                <path d="M5.338 1.59a61.44 61.44 0 0 0-2.837.856.481.481 0 0 0-.328.39c-.554 4.157 1.041 7.47 2.379 9.737 1.27 2.18 2.713 3.68 4.148 3.943.5.15 1.01.225 1.516.225s1.016-.075 1.516-.225c1.435-.263 2.878-1.763 4.148-3.943 1.338-2.268 2.933-5.58 2.379-9.737a.48.48 0 0 0-.328-.39c-.651-.213-1.75-.56-2.837-.855C9.552 1.29 8.531 1.067 8 1.067c-.53 0-1.552.223-2.662.524zM5.072.56C6.157.265 7.31 0 8 0s1.843.265 2.928.56c1.11.3 2.229.655 2.887.87a1.54 1.54 0 0 1 1.044 1.262c.596 4.477-.787 7.795-2.465 9.99a11.775 11.775 0 0 1-4.762 4.293 11.775 11.775 0 0 1-4.762-4.293C1.928 10.487.545 7.169 1.141 2.692A1.54 1.54 0 0 1 2.185 1.43 62.456 62.456 0 0 1 5.072.56z"/>
+                                <path d="M10.854 5.146a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L7.5 7.793l2.646-2.647a.5.5 0 0 1 .708 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Качественные продукты</h3>
+                        <p class="text-muted">Используем только свежие и качественные ингредиенты от проверенных поставщиков.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100 p-4 text-center">
+                        <div class="feature-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#8B4513" class="bi bi-palette" viewBox="0 0 16 16">
+                                <path d="M8 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zm4 3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM5.5 7a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/>
+                                <path d="M16 8c0 3.15-1.866 2.585-3.567 2.951C11.42 11.154 10.076 11.5 8 11.5c-2.076 0-3.42-.346-4.433-.549C1.866 10.585 0 11.15 0 8a8 8 0 1 1 16 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Разнообразное меню</h3>
+                        <p class="text-muted">Более 30 блюд на выбор: супы, основные блюда, салаты, напитки и десерты.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100 p-4 text-center">
+                        <div class="feature-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#8B4513" class="bi bi-wallet2" viewBox="0 0 16 16">
+                                <path d="M12.136.326A1.5 1.5 0 0 1 14 1.78V3h.5A1.5 1.5 0 0 1 16 4.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 0 13.5v-9a1.5 1.5 0 0 1 1.432-1.499L12.136.326zM5.562 3H13V1.78a.5.5 0 0 0-.621-.484L5.562 3zM1.5 4a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5h13a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5h-13z"/>
+                            </svg>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Доступные цены</h3>
+                        <p class="text-muted">Предлагаем качественные бизнес-ланчи по разумным ценам. Скидки для постоянных клиентов.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100 p-4 text-center">
+                        <div class="feature-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#8B4513" class="bi bi-heart" viewBox="0 0 16 16">
+                                <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"/>
+                            </svg>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Забота о клиентах</h3>
+                        <p class="text-muted">Индивидуальный подход к каждому заказу. Учитываем ваши пожелания и диетические ограничения.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="feature-card h-100 p-4 text-center">
+                        <div class="feature-icon mb-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" fill="#8B4513" class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path d="M12.166 8.94c-.524 1.395-1.308 2.76-2.314 4.022C9.29 13.906 8.682 14.5 8 14.5s-1.29-.594-1.852-1.538c-1.006-1.262-1.79-2.627-2.314-4.022C3.24 7.5 3.5 5.5 8 5.5s4.76 2 4.166 3.44zm.122 4.294a8.931 8.931 0 0 1 1.712-1.254A1.5 1.5 0 0 0 15.5 8.5a7.5 7.5 0 1 0-7.5 7.5 1.5 1.5 0 0 0 1.5-1.5c0-.741-.16-1.44-.428-2.08z"/>
+                                <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zM1.5 8a6.5 6.5 0 1 1 13 0 6.5 6.5 0 0 1-13 0z"/>
+                            </svg>
+                        </div>
+                        <h3 class="h4 fw-bold mb-3">Доставка по Москве</h3>
+                        <p class="text-muted">Осуществляем доставку по всей Москве. Работаем с офисами и частными клиентами.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5" id="menu">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="display-4 fw-bold mb-4 text-white">Готовы попробовать?</h2>
+                    <p class="lead text-white mb-5">
+                        Соберите свой идеальный бизнес-ланч из нашего разнообразного меню. 
+                        Выберите суп, основное блюдо, салат, напиток и десерт по вашему вкусу.
+                    </p>
+                    <a href="lunch.html" class="btn btn-light btn-lg px-5 py-3 fw-bold">
+                        Собрать ланч сейчас
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact-section py-5" id="contact">
+        <div class="container">
+            <div class="row mb-5">
+                <div class="col-12 text-center">
+                    <h2 class="display-4 fw-bold mb-3">Свяжитесь с нами</h2>
+                    <p class="lead text-muted">Есть вопросы? Мы всегда рады помочь!</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-6">
+                    <div class="contact-info h-100 p-4">
+                        <h3 class="h4 fw-bold mb-4">Контактная информация</h3>
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#8B4513" class="bi bi-telephone me-3" viewBox="0 0 16 16">
+                                    <path d="M3.654 1.328a.678.678 0 0 0-1.015-.663L1.397 2.921a.678.678 0 0 0-.412.867l.736 2.27c.138.413.445.756.923.965l4.102 1.913c.44.205.96.206 1.4 0l4.102-1.913c.478-.209.785-.552.923-.965l.736-2.27a.678.678 0 0 0-.412-.867l-2.242-1.256a.678.678 0 0 0-1.015.663l-.523 1.736a.678.678 0 0 1-.412.867l-.736.354a.678.678 0 0 1-.663-.067L5.93 4.745a.678.678 0 0 1-.067-.663l.354-.736a.678.678 0 0 1 .867-.412l1.736.523zm1.89 1.944-1.32-.396a.678.678 0 0 0-.663.067L4.745 5.93a.678.678 0 0 0-.067.663l.396 1.32a.678.678 0 0 1-.412.867l-.736.354a.678.678 0 0 0-.067.663l.523 1.736a.678.678 0 0 0 .867.412l1.736-.523a.678.678 0 0 1 .663.067l1.32.396a.678.678 0 0 0 .663-.067l1.32-.396a.678.678 0 0 1 .663.067l1.736.523a.678.678 0 0 0 .867-.412l.523-1.736a.678.678 0 0 0-.067-.663l-.354-.736a.678.678 0 0 1 .412-.867l1.32-.396a.678.678 0 0 0 .067-.663L11.255 4.745a.678.678 0 0 0-.412-.867l-1.32-.396a.678.678 0 0 0-.663.067L7.745 4.745a.678.678 0 0 1-.867.412l-1.32.396z"/>
+                                    <path d="M11 14a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V9.128a1 1 0 0 1 .629-.928l4-1.714a1 1 0 0 1 .742 0l4 1.714a1 1 0 0 1 .629.928V14z"/>
+                                </svg>
+                                <strong>Телефон:</strong>
+                            </div>
+                            <p class="ms-5 mb-0"><a href="tel:+79991234567" class="text-decoration-none">+7 (999) 123-45-67</a></p>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#8B4513" class="bi bi-envelope me-3" viewBox="0 0 16 16">
+                                    <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
+                                </svg>
+                                <strong>Email:</strong>
+                            </div>
+                            <p class="ms-5 mb-0"><a href="mailto:info@uyutnoe-cafe.ru" class="text-decoration-none">info@uyutnoe-cafe.ru</a></p>
+                        </div>
+                        <div class="contact-item mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#8B4513" class="bi bi-clock me-3" viewBox="0 0 16 16">
+                                    <path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71V3.5z"/>
+                                    <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0z"/>
+                                </svg>
+                                <strong>Время работы:</strong>
+                            </div>
+                            <p class="ms-5 mb-0">Пн-Пт: 7:00 - 23:00<br>Сб-Вс: 9:00 - 21:00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="contact-form-wrapper">
+                        <h3 class="h4 fw-bold mb-4">Форма обратной связи</h3>
+                        <form action="https://postman-echo.com/post" method="POST" class="contact-form">
+                            <div class="mb-3">
+                                <label for="contactName" class="form-label">Ваше имя *</label>
+                                <input type="text" class="form-control" id="contactName" name="name" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactEmail" class="form-label">Email *</label>
+                                <input type="email" class="form-control" id="contactEmail" name="email" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactPhone" class="form-label">Телефон</label>
+                                <input type="tel" class="form-control" id="contactPhone" name="phone">
+                            </div>
+                            <div class="mb-3">
+                                <label for="contactMessage" class="form-label">Сообщение *</label>
+                                <textarea class="form-control" id="contactMessage" name="message" rows="5" required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-lg w-100">Отправить сообщение</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2024 Уютное Кафе. Все права защищены.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="index.html" class="text-white text-decoration-none me-3">Главная</a>
+                    <a href="lunch.html" class="text-white text-decoration-none me-3">Собрать ланч</a>
+                    <a href="orders.html" class="text-white text-decoration-none">Заказы</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
